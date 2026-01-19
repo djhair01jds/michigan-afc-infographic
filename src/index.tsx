@@ -15,6 +15,9 @@ if (process.env.REACT_APP_SENTRY_DSN) {
     environment: process.env.NODE_ENV,
     integrations: [
       Sentry.browserTracingIntegration(),
+      Sentry.feedbackIntegration({
+        colorScheme: "system",
+      }),
     ],
     tracesSampleRate: 1.0,
   });
