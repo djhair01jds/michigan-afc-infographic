@@ -17,6 +17,7 @@ if (process.env.REACT_APP_SENTRY_DSN) {
       Sentry.browserTracingIntegration(),
       Sentry.feedbackIntegration({
         colorScheme: "system",
+        enableScreenshot: true,
       }),
     ],
     tracesSampleRate: 1.0,
