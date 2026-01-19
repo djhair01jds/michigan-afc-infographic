@@ -1067,7 +1067,6 @@ const AFCRulesInfographic = () => {
         {/* Facility Type Selector */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {(Object.entries(facilityTypes) as [FacilityType, typeof facilityTypes[FacilityType]][]).map(([key, type]) => {
-            const Icon = type.icon;
             const isSelected = selectedFacility === key;
             return (
               <button
