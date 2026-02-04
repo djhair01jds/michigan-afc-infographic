@@ -1,0 +1,115 @@
+name: Check External Links
+
+on:
+  # Run weekly on Sundays at 9am UTC
+  schedule:
+    - cron: '0 9 * * 0'
+
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run link checker
+        id: linkcheck
+        continue-on-error: true
+        run: node scripts/check-links.js --verbose
+
+      - name: Create issue if links are broken
+        if: steps.linkcheck.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { execSync } = require('child_process');
+
+            // Get detailed results
+            let output;
+            try {
+              output = execSync('node scripts/check-links.js --json', { encoding: 'utf-8' });
+            } catch (e) {
+              output = e.stdout || '{}';
+            }
+
+            let results;
+            try {
+              results = JSON.parse(output);
+            } catch {
+              results = { failed: 1, results: [] };
+            }
+
+            const failed = results.results?.filter(r => !r.ok) || [];
+
+            const issueBody = `## Broken Links Detected
+
+            The weekly link check found **${failed.length} broken link(s)** in the AFC Rules Infographic.
+
+            ### Failed URLs
+
+            ${failed.map(r => `- ${r.url}\n  - Status: ${r.status || 'N/A'}\n  - Error: ${r.error || 'N/A'}`).join('\n\n')}
+
+            ### Details
+
+            - **Check Time**: ${results.timestamp || new Date().toISOString()}
+            - **Total URLs**: ${results.total || 'unknown'}
+            - **Passed**: ${results.passed || 'unknown'}
+            - **Failed**: ${results.failed || failed.length}
+
+            ### Next Steps
+
+            1. Verify the URLs are actually broken (not just temporarily unavailable)
+            2. Find updated URLs for any moved documents
+            3. Update \`src/components/AFCRulesInfographic.tsx\` with corrected links
+
+            ---
+            *This issue was automatically created by the link checker workflow.*
+            `;
+
+            // Check if there's already an open issue for broken links
+            const existingIssues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'broken-links',
+            });
+
+            if (existingIssues.data.length > 0) {
+              // Update existing issue
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existingIssues.data[0].number,
+                body: `## Updated Link Check Results\n\n${issueBody}`,
+              });
+              console.log(`Updated existing issue #${existingIssues.data[0].number}`);
+            } else {
+              // Create new issue
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: 'Broken links detected in AFC Rules Infographic',
+                body: issueBody,
+                labels: ['broken-links', 'maintenance'],
+              });
+              console.log('Created new issue for broken links');
+            }
+
+      - name: Summary
+        run: |
+          echo "## Link Check Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.linkcheck.outcome }}" == "failure" ]; then
+            echo "❌ Some links are broken. Check the logs or the created issue for details." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "✅ All links are working!" >> $GITHUB_STEP_SUMMARY
+          fi
