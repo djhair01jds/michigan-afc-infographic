@@ -1055,7 +1055,7 @@ const AFCRulesInfographic = () => {
             </div>
             <div className="flex items-center gap-2">
               <Shield className="w-4 h-4" />
-              <span>LARA Official Highlights</span>
+              <a href="https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/afc/Key-Highlights-of-New-Ruleset.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 underline">Official LARA Key Highlights</a>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4" />
@@ -1257,7 +1257,7 @@ const AFCRulesInfographic = () => {
             <div className="space-y-3">
               <h3 className="font-bold text-amber-900 mb-2">Important Notes:</h3>
               <ul className="space-y-2 text-sm text-amber-800 list-disc list-inside">
-                <li>This analysis synthesizes AI mappings from ChatGPT, Gemini, and Grok PLUS official LARA Key Highlights</li>
+                <li>This analysis synthesizes AI mappings from ChatGPT, Gemini, and Grok PLUS <a href="https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/afc/Key-Highlights-of-New-Ruleset.pdf" target="_blank" rel="noopener noreferrer" className="text-amber-900 font-semibold hover:text-amber-700 underline">official LARA Key Highlights</a></li>
                 <li>Always consult LARA directly for official guidance and clarifications</li>
                 <li>Facilities licensed before specific dates may have grandfathered provisions</li>
                 <li>Implementation timelines may vary - contact your LARA consultant</li>
