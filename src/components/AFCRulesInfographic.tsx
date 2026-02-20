@@ -75,21 +75,21 @@ const AFCRulesInfographic = () => {
         source: "LARA Key Highlight #1"
       },
       {
-        id: 'family-fire-quarterly',
+        id: 'family-emergency-prep',
         icon: Bell,
-        title: "Quarterly Fire Safety Training & Drills",
-        oldRule: "Annual or as needed",
+        title: "Emergency Preparedness Plan (All-Hazards)",
+        oldRule: "R 400.1438",
         oldRuleUrl: "/family_home_rules.pdf",
-        newRule: "R 400.619(7) & (8)",
+        newRule: "R 400.619",
         newRuleUrl: "https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/Folder1/AFC-Ruleset-Final.pdf",
-        oldText: "Fire safety training conducted annually or as needed",
-        newText: "Staff trained quarterly on fire alarm and protection equipment operation; emergency preparedness plan practiced quarterly on each shift (7am-3pm, 3pm-11pm, 11pm-7am); records maintained 2 years",
+        oldText: "Required evacuation plan, posted procedures, 4 fire drills/year (2 during sleeping hours), and staff/resident familiarity",
+        newText: "All-hazards emergency preparedness plan required covering severe weather, extended utility outage, alternate care location, limited mobility methods, and fire safety. Staff trained at hire and quarterly. Plan practiced quarterly on each shift (7am-3pm, 3pm-11pm, 11pm-7am). Records maintained 2 years.",
         impact: "high",
-        visual: { old: "📅 Annual", new: "📅 Every Quarter, Every Shift" },
+        visual: { old: "📅 4 Drills/Year (Fire)", new: "📅 All-Hazards, Per Shift, Quarterly" },
         timeline: "Quarterly (every 3 months)",
         cost: "Staff time",
-        action: "Schedule quarterly training for all shifts; maintain 2-year training records; practice emergency plan each quarter",
-        source: "LARA Key Highlight #16"
+        action: "Create/maintain written Emergency Preparedness Plan covering all hazards (fire, weather, utility outage, alternate care location); train staff at hire and quarterly; practice plan quarterly on each shift (7-3, 3-11, 11-7); document resident-specific assistance needs and evacuation methods; ensure shelter-in-place and evacuation/temporary housing planning is covered; retain all training and drill records 2 years",
+        source: "LARA Key Highlight #16 + MDHHS Emergency Planning Toolkit"
       },
       {
         id: 'family-personnel',
@@ -352,21 +352,21 @@ const AFCRulesInfographic = () => {
         source: "LARA Key Highlight #1"
       },
       {
-        id: 'small-fire-quarterly',
+        id: 'small-emergency-prep',
         icon: Bell,
-        title: "Quarterly Fire Safety Training & Drills",
-        oldRule: "Annual or as needed",
+        title: "Emergency Preparedness Plan (All-Hazards)",
+        oldRule: "R 400.14318",
         oldRuleUrl: "/small_group_home_rules.pdf",
-        newRule: "R 400.619(7) & (8)",
+        newRule: "R 400.619",
         newRuleUrl: "https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/Folder1/AFC-Ruleset-Final.pdf",
-        oldText: "Fire safety training conducted annually or as needed",
-        newText: "Staff trained quarterly on fire alarm and protection equipment operation; emergency preparedness plan practiced quarterly on each shift (7am-3pm, 3pm-11pm, 11pm-7am); records maintained 2 years",
+        oldText: "Required emergency plan with quarterly practice across day/evening/sleeping shifts; staff and resident familiarity with procedures",
+        newText: "All-hazards emergency preparedness plan required with explicit plan components including severe weather, extended utility outage, alternate care location, and limited mobility methods. Staff trained at hire and quarterly. Plan practiced quarterly on each shift (7am-3pm, 3pm-11pm, 11pm-7am). Records maintained 2 years.",
         impact: "high",
-        visual: { old: "📅 Annual", new: "📅 Every Quarter, Every Shift" },
+        visual: { old: "📅 Quarterly (Fire-Focused)", new: "📅 All-Hazards, Per Shift, Quarterly" },
         timeline: "Quarterly (every 3 months)",
         cost: "Staff time",
-        action: "Schedule quarterly training for all shifts; maintain 2-year training records; practice emergency plan each quarter",
-        source: "LARA Key Highlight #16"
+        action: "Create/maintain written Emergency Preparedness Plan covering all hazards (fire, weather, utility outage, alternate care location); train staff at hire and quarterly; practice plan quarterly on each shift (7-3, 3-11, 11-7); document resident-specific assistance needs and evacuation methods; ensure shelter-in-place and evacuation/temporary housing planning is covered; retain all training and drill records 2 years",
+        source: "LARA Key Highlight #16 + MDHHS Emergency Planning Toolkit"
       },
       {
         id: 'small-training',
@@ -596,21 +596,21 @@ const AFCRulesInfographic = () => {
         source: "LARA Key Highlight #1"
       },
       {
-        id: 'large-fire-quarterly',
+        id: 'large-emergency-prep',
         icon: Bell,
-        title: "Quarterly Fire Safety Training & Drills",
-        oldRule: "Annual or as needed",
+        title: "Emergency Preparedness Plan (All-Hazards)",
+        oldRule: "R 400.15318",
         oldRuleUrl: "/large_group_home_rules.pdf",
-        newRule: "R 400.619(7) & (8)",
+        newRule: "R 400.619",
         newRuleUrl: "https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/Folder1/AFC-Ruleset-Final.pdf",
-        oldText: "Fire safety training conducted annually or as needed",
-        newText: "Staff trained quarterly on fire alarm and protection equipment operation; emergency preparedness plan practiced quarterly on each shift (7am-3pm, 3pm-11pm, 11pm-7am); records maintained 2 years",
+        oldText: "Required emergency plan, staff familiarity, and practice once per quarter across day/evening/sleeping shifts; records available on request",
+        newText: "All-hazards emergency preparedness plan required (fire, utility outage, alternate care location, limited mobility methods). Staff trained at hire and quarterly. Plan practiced quarterly on each shift (7am-3pm, 3pm-11pm, 11pm-7am). Records maintained 2 years.",
         impact: "high",
-        visual: { old: "📅 Annual", new: "📅 Every Quarter, Every Shift" },
+        visual: { old: "📅 Quarterly (Fire-Focused)", new: "📅 All-Hazards, Per Shift, Quarterly" },
         timeline: "Quarterly (every 3 months)",
         cost: "Staff time",
-        action: "Schedule quarterly training for all shifts; maintain 2-year training records; practice emergency plan each quarter",
-        source: "LARA Key Highlight #16"
+        action: "Create/maintain written Emergency Preparedness Plan covering all hazards (fire, weather, utility outage, alternate care location); train staff at hire and quarterly; practice plan quarterly on each shift (7-3, 3-11, 11-7); document resident-specific assistance needs and evacuation methods (Appendix F supports documentation); ensure shelter-in-place and evacuation/temporary housing planning is covered; retain all training and drill records 2 years",
+        source: "LARA Key Highlight #16 + MDHHS Emergency Planning Toolkit"
       },
       {
         id: 'large-training',
@@ -712,7 +712,7 @@ const AFCRulesInfographic = () => {
         visual: { old: "📋 General Plan", new: "📋 Individual Assessments" },
         timeline: "30 days for existing residents",
         cost: "$0",
-        action: "Conduct and document individual evacuation assessments for all residents",
+        action: "Conduct and document individual evacuation assessments for all residents; use Appendix F guidance to support evacuation risk and mobility documentation",
         source: "AI Analysis"
       },
       // BENEFICIAL
@@ -805,21 +805,21 @@ const AFCRulesInfographic = () => {
         source: "LARA Key Highlight #1"
       },
       {
-        id: 'congregate-fire-quarterly',
+        id: 'congregate-emergency-prep',
         icon: Bell,
-        title: "Quarterly Fire Safety Training & Drills",
-        oldRule: "Annual or as needed",
+        title: "Emergency Preparedness Plan (All-Hazards)",
+        oldRule: "R 400.2461",
         oldRuleUrl: "/congregate_rules.pdf",
-        newRule: "R 400.619(7) & (8)",
+        newRule: "R 400.619",
         newRuleUrl: "https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/Folder1/AFC-Ruleset-Final.pdf",
-        oldText: "Fire safety training conducted annually or as needed",
-        newText: "Staff trained quarterly on fire alarm and protection equipment operation; emergency preparedness plan practiced quarterly on each shift (7am-3pm, 3pm-11pm, 11pm-7am); records maintained 2 years",
+        oldText: "Written emergency plan; 4 fire drills/year; annual plan review",
+        newText: "All-hazards emergency preparedness plan required with explicit components (fire, utility outage, alternate care location, limited mobility methods). Staff trained at hire and quarterly. Plan practiced quarterly on each shift (7am-3pm, 3pm-11pm, 11pm-7am). Records maintained 2 years.",
         impact: "high",
-        visual: { old: "📅 Annual", new: "📅 Every Quarter, Every Shift" },
+        visual: { old: "📅 4 Drills/Year + Annual Review", new: "📅 All-Hazards, Per Shift, Quarterly" },
         timeline: "Quarterly (every 3 months)",
         cost: "Staff time",
-        action: "Schedule quarterly training for all shifts; maintain 2-year training records; practice emergency plan each quarter",
-        source: "LARA Key Highlight #16"
+        action: "Update emergency preparedness plan to meet all-hazards requirements (fire, weather, utility outage, alternate care location); train staff at hire and quarterly; practice plan quarterly on each shift (7-3, 3-11, 11-7); document resident-specific assistance needs and evacuation methods; ensure shelter-in-place and evacuation/temporary housing planning is robust using Michigan's AFC/HFA toolkit; retain all training and drill records 2 years",
+        source: "LARA Key Highlight #16 + MDHHS Emergency Planning Toolkit"
       },
       {
         id: 'congregate-discharge',
