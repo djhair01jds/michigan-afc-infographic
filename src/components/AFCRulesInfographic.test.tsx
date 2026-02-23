@@ -166,12 +166,10 @@ describe('AFCRulesInfographic', () => {
     it('displays correct impact counts for Small Group Home', () => {
       render(<AFCRulesInfographic />);
 
-      // Small Group Home has: 4 high, 3 medium, 6 beneficial, 1 none
-      const summarySection = screen.getByText('Small Group Home - Change Summary').closest('div');
-
-      // The counts are displayed as large numbers
-      expect(screen.getByText('4')).toBeInTheDocument(); // high
-      expect(screen.getByText('3')).toBeInTheDocument(); // medium
+      // Small Group Home has: 4 high, 4 medium, 6 beneficial, 1 none
+      // (food-labeling card split into Nutrition Standards + Food Service Requirements)
+      const allFours = screen.getAllByText('4');
+      expect(allFours.length).toBeGreaterThanOrEqual(2); // high (4) and medium (4)
       expect(screen.getByText('6')).toBeInTheDocument(); // beneficial
       expect(screen.getByText('1')).toBeInTheDocument(); // none
     });
