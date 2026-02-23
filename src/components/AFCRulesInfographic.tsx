@@ -477,7 +477,7 @@ const AFCRulesInfographic = () => {
         title: "Additional Food Service Requirements",
         oldRule: "R 400.14402 (legacy)",
         oldRuleUrl: "/small_group_home_rules.pdf",
-        newRule: "R 400.665; R 400.663(8)",
+        newRule: "R 400.665; R 400.663(7)",
         newRuleUrl: "https://www.michigan.gov/lara/-/media/Project/Websites/lara/bchs/Folder1/AFC-Ruleset-Final.pdf",
         oldText: "Safe food sources, contamination protection, 40°F/140°F temperature controls, thermometers, equipment/utensil sanitation, clean food-prep surfaces required",
         newText: "Prior controls continue; adds explicit repackaged-food labeling + discard dating (≤7 days; day 1 = open/prep); allergen indication required when applicable; at least one qualified food-prep staff person required (7+ residents)",
