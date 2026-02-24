@@ -1332,6 +1332,7 @@ const AFCRulesInfographic = () => {
                 <li>Click each card to see detailed old vs. new rule comparisons</li>
                 <li>This knowledge resource sponsored by <a href="https://jirehdigitalsolutions.com/" target="_blank" rel="noopener noreferrer" className="text-amber-900 font-semibold hover:text-amber-700 underline">Jireh Digital Solutions</a></li>
               </ul>
+              <p className="text-xs text-amber-600 text-right mt-2">v1.2.0</p>
             </div>
           </div>
         </div>
