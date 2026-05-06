@@ -32,7 +32,8 @@ if (process.env.REACT_APP_SENTRY_DSN) {
 // ============================================
 if (process.env.REACT_APP_POSTHOG_KEY) {
   posthog.init(process.env.REACT_APP_POSTHOG_KEY, {
-    api_host: 'https://app.posthog.com',
+    api_host: 'https://ph.adultfostercare.net',
+    ui_host: 'https://app.posthog.com',
     capture_pageview: true,
   });
   console.log('✓ PostHog initialized');
