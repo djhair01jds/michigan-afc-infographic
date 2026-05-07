@@ -2,7 +2,26 @@
   "permissions": {
     "allow": [
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git log:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run view:*)",
+      "Bash(gh run watch:*)",
+      "Bash(gh secret list:*)",
+      "Bash(gh issue:*)",
+      "Bash(npm run build)",
+      "Bash(npm test:*)",
+      "Bash(npm install:*)",
+      "Bash(curl:*)",
+      "Bash(nslookup:*)",
+      "Bash(node update-dns-cname.js:*)",
+      "Bash(firebase deploy:*)",
+      "Bash(firebase hosting:sites:list:*)",
+      "Bash(firebase hosting:channel:list:*)",
+      "WebSearch"
     ]
   }
 }
